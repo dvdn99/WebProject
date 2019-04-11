@@ -1,0 +1,249 @@
+header {
+    position: relative;
+    top: 40%;
+    width: 100%;
+    z-index: 2;
+}
+
+@media screen and (max-width: 600px) and (max-height: 400px) {
+    header {
+        position: relative;
+        top: 60%;
+        width: 100%;
+        z-index: 2;
+    }
+}
+
+audio {
+    width: 300px;
+    height: 20px;
+    display: block;
+    float: right;
+}
+
+
+nav {
+    overflow: hidden;
+    position: sticky; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    z-index: 4;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: -20px;
+}
+
+label {
+    color: lightcyan;
+    font-family: myFirstFont;
+}
+
+.centertxt1 {
+    text-align: center;
+}
+
+.centerpos {
+    position: relative;
+    left: 40%;
+}
+
+img.border {
+    align-content: center;
+    border-radius: 50%;
+}
+
+body {
+    margin: 0;
+    background-image: url("background.jpg");
+    background-attachment: fixed;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 31px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+.button2:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+.pos {
+    position: relative;
+    left: 10px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+}
+
+label.center {
+    text-align: center;
+}
+
+h3.left {
+    position: relative;
+    left: 0;
+}
+
+
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+
+h1 {
+    text-shadow: 3px 3px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    color: lightcyan;
+    font-family: myFirstFont;
+}
+
+h2 {
+    text-shadow: 3px 3px 0 #000,
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    color: lightcyan;
+    font-family: myFirstFont;
+}
+
+h3 {
+    color: lightcyan;
+    font-family: myFirstFont;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
+}
+
+.map-responsive{
+    position:relative;
+    width: 600px;
+    height: 450px;
+}
+
+@media screen and (max-width: 600px) and (max-height: 600px) {
+    .map-responsive{
+        position:relative;
+        width: 300px;
+        height: 225px;
+    }
+}
+
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+
+ul.social-network {
+    list-style: none;
+    display: inline;
+    margin-left: 0 !important;
+    padding: 0;
+}
+
+ul.social-network li {
+    display: inline;
+    margin: 0 5px;
+}
+
+.social-network a.icoFacebook:hover {
+    background-color: #3B5998;
+}
+
+.social-network a.icoTwitter:hover {
+    background-color: #33ccff;
+}
+
+.social-network a.icoGoogle:hover {
+    background-color: #BD3518;
+}
+
+.social-network a.icoFacebook:hover i, .social-network a.icoTwitter:hover i {
+    color: #fff;
+}
+
+a.socialIcon:hover, .socialHoverClass {
+    color: #44BCDD;
+}
+
+
+.social-circle li a {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto 0 auto;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    background-color: #D3D3D3;
+}
+
+.social-circle li i {
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+}
+
+.social-circle li a:hover i, .triggeredHover {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -ms--transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.social-circle i {
+    color: #fff;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    -o-transition: all 0.8s;
+    -ms-transition: all 0.8s;
+    transition: all 0.8s;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
