@@ -18,22 +18,12 @@ audio {
     width: 300px;
     height: 20px;
     display: block;
-    float: right;
 }
 
-
-nav {
+li {
     overflow: hidden;
-    position: sticky; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
-    z-index: 4;
-}
-
-footer {
-    position: absolute;
-    width: 100%;
-    bottom: -20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 label {
@@ -55,10 +45,29 @@ img.border {
     border-radius: 50%;
 }
 
+.logo-text{
+    text-effect: engrave;
+}
+
 body {
     margin: 0;
     background-image: url("background.jpg");
     background-attachment: fixed;
+}
+
+textarea {
+    display:block;
+    margin:1em 0;
+}
+
+.slide-img{
+    max-height: 400px;
+    max-width: 600px;
+    width:100%;
+}
+
+.label-lg{
+    font-size: x-large;
 }
 
 .button {
@@ -144,29 +153,6 @@ h3 {
     font-family: myFirstFont;
     src: url(sansation_light.woff);
 }
-
-.map-responsive{
-    position:relative;
-    width: 600px;
-    height: 450px;
-}
-
-@media screen and (max-width: 600px) and (max-height: 600px) {
-    .map-responsive{
-        position:relative;
-        width: 300px;
-        height: 225px;
-    }
-}
-
-.map-responsive iframe{
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
-}
-
 
 ul.social-network {
     list-style: none;

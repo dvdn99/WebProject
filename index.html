@@ -1,41 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <meta charset="UTF-8">
     <meta name="author" content="David Novizky">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
     <title> Champions League Final </title>
 </head>
 <body>
 
-<nav class="navbar navbar-toggler navbar-expand-sm bg-light navbar-light, content-fluid fixed-top">
-    <div class="navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li><img src="mylogo.png" alt="cl logo" width="35" height="35"></li>
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top ">
 
-            <li class="nav-item active">
-                <a class="nav-link disabled"><b>UEFA Champions League</b></a>
+
+    <a class="navbar-brand"><img src="mylogo.png" alt="cl logo" width="35" height="35"></a>
+    <span class="navbar-brand font-weight-bold">UEFA Champions League</span>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapse_target">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse clearfix" id="collapse_target">
+
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link text-primary" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link text-primary" href="#reg">Registration</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#reg">Registration</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://www.uefa.com/">Official Site</a>
-            </li>
-            <li>
-                <audio class="form-inline my-2 my-lg-0 mr-sm-2" controls>
-                    <source src="uefa-champions-league-theme.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
+                <a class="nav-link text-primary" href="https://www.uefa.com/">Official Site</a>
             </li>
         </ul>
+        <span class="container">
+           <span class="float-right">
+               <audio controls>
+                  <source src="uefa-champions-league-theme.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+               </audio>
+           </span>
+        </span>
     </div>
 </nav>
 
@@ -45,21 +63,22 @@
     </h1>
 </header>
 
-<section>
-    <img alt="Image1" class="center border responsive" width="421" height="236"
-         src="https://upload.wikimedia.org/wikipedia/en/8/8c/2019_UCL_Final_identity.jpg">
-    <label class="center"><b>Will take place in Madrid on 1st of June 2019</b></label>
-</section>
 <br>
-<section>
-    <br>
-    <img alt="Image2" width="850" height="450" class="center responsive"
-         src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Wanda-Metropolitano.jpg/1200px-Wanda-Metropolitano.jpg">
-    <label class="center"><b>The Wanda Metropolitano in Madrid will host the final for first time in history</b>
-    </label>
-</section>
 
-<br><br>
+<div class="container">
+    <div>
+        <img class="img-fluid rounded mx-auto d-block slide-img" src="carrousel\1.jpg" alt="image" id="car">
+    </div>
+    <div>
+        <a class="carousel-control-next"  role="button" id="nextButton">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+    </div>
+</div>
+
+
+<br>
+<br>
 
 <article>
     <div class="container-fluid">
@@ -70,32 +89,30 @@
                 </label>
             </p>
         </h1>
-        <h4>
-            <label>
-                The 2019 UEFA Champions League Final will be the final match of the 2018–19 UEFA Champions League, the
-                64th
-                season of Europe's premier club football tournament organised by UEFA, and the 27th season since it was
-                renamed from the European Champion Clubs' Cup to the UEFA Champions League. It will be played at the
-                Wanda
-                Metropolitano in Madrid, Spain on 1 June 2019.[1]
+        <label class="label-lg" id="description1">
+            The 2019 UEFA Champions League Final will be the final match of the 2018–19 UEFA Champions League, the
+            64th
+            season of Europe's premier club football tournament organised by UEFA, and the 27th season since it was
+            renamed from the European Champion Clubs' Cup to the UEFA Champions League. It will be played at the
+            Wanda
+            Metropolitano in Madrid, Spain on 1 June 2019.[1]
 
-                The winners will earn the right to play against the winners of the 2018–19 UEFA Europa League in the
-                2019
-                UEFA Super Cup. They will also qualify to enter the group stage of the 2019–20 UEFA Champions League,
-                and if
-                they have already qualified through their league performance, the berth reserved will be given to the
-                champions of the 2018–19 Austrian Bundesliga, the 11th-ranked association according to next season's
-                access
-                list.[2][3]
+            The winners will earn the right to play against the winners of the 2018–19 UEFA Europa League in the
+            2019
+            UEFA Super Cup. They will also qualify to enter the group stage of the 2019–20 UEFA Champions League,
+            and if
+            they have already qualified through their league performance, the berth reserved will be given to the
+            champions of the 2018–19 Austrian Bundesliga, the 11th-ranked association according to next season's
+            access
+            list.[2][3]
 
-                In March 2018, UEFA announced that a fourth substitution will be allowed in extra time and that the
-                number
-                of substitutes has been increased from 7 to 12. The kick-off time has also been changed from 20:45 CEST
-                to
-                21:00 CEST.[4] The match will also be the first final to use the video assistant referee (VAR)
-                system.[5]
-            </label>
-        </h4>
+            In March 2018, UEFA announced that a fourth substitution will be allowed in extra time and that the
+            number
+            of substitutes has been increased from 7 to 12. The kick-off time has also been changed from 20:45 CEST
+            to
+            21:00 CEST.[4] The match will also be the first final to use the video assistant referee (VAR)
+            system.[5]
+        </label>
     </div>
 </article>
 
@@ -108,7 +125,7 @@
                 Host selection <br></h2></label>
         </p>
         <h6>
-            <label>
+            <label class="label-lg" id="description2">
                 For the first time ever, an open bidding process was launched on 9 December 2016 by UEFA to select the
                 venues of
                 the club competition finals (UEFA Champions League, UEFA Europa League, UEFA Women's Champions League,
@@ -128,8 +145,10 @@
     <label>
         <h2><br>Event Location</h2>
     </label>
-    <div class="map-responsive">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.765193593699!2d-3.601656085236901!3d40.43619796238036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422fea8401b789%3A0x245d0d64dad50ec4!2sWanda+Metropolitano!5e0!3m2!1ses!2sil!4v1554990061493!5m2!1ses!2sil"
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.765193593699!2d-3.601656085236901
+        !3d40.43619796238036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422fea8401b789%3A0x245d0d64dad50e
+        c4!2sWanda+Metropolitano!5e0!3m2!1ses!2sil!4v1554990061493!5m2!1ses!2sil"
                 width="600" height="450" frameborder="0" allowfullscreen></iframe>
         <a href="https://www.emojilib.com"></a></div>
     </div>
@@ -141,86 +160,78 @@
     </label>
     <ul>
         <h3>
-            <li>18:00 Stadium open its doors for fans</li>
+            <label  class="label-lg" id="description3">
+            <li>18:00 Stadium open its doors</li>
             <li>19:00 Teams arrives</li>
             <li>20:00 Pre-Match concert</li>
             <li>21:00 Match Starts</li>
+            </label>
         </h3>
     </ul>
 </section>
 
-
-<section class="container pos">
-    <table border="3" bgcolor="#e0ffff" class="container pos">
+<div class="table-responsive-sm container">
+    <table class="table table-hover table-light">
         <label>
             <h2><br>Shuttle Arrival Options</h2>
         </label>
         <br>
+        <thead>
         <tr>
-            <th><h6>Name</h6></th>
-            <th><h6>Address</h6></th>
-            <th><h6>Hour</h6></th>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+            <th scope="col">Hour</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Lucas Obertan</td>
+            <td>Hashoftim 17</td>
+            <td>17:00</td>
         </tr>
         <tr>
-            <td>
-                Lucas Obertan
-            </td>
-            <td>
-                Hashoftim 17
-            </td>
-            <td>
-                17:00
-            </td>
+            <th scope="row">2</th>
+            <td>Andres Rodriguez</td>
+            <td>Even Gbirol 24</td>
+            <td>17:30</td>
         </tr>
         <tr>
-            <td>
-                Andres Rodriguez
-            </td>
-            <td>
-                Even Gbirol 24
-            </td>
-            <td>
-                17:30
-            </td>
+            <th scope="row">3</th>
+            <td>Lior Asulin</td>
+            <td>LaGuardia 37</td>
+            <td>18:00</td>
         </tr>
-        <tr>
-            <td>
-                Lior Asulin
-            </td>
-            <td>
-                LaGuardia 37
-            </td>
-            <td>
-                18:00
-            </td>
-        </tr>
+        </tbody>
     </table>
-</section>
+</div>
 
 <section class="container pos">
     <label>
         <h2 id="reg"><br>Event Registration: Get Your Ticket!</h2>
     </label>
-    <form method="post" action="http://www.uefa.com" autocomplete="on">
+
+    <form method="get" action="" autocomplete="on" name="myForm" novalidate>
 
         <p>
             <label>Full name: <br>
-                <input type="text" size="23" maxlength="30"/>
+                <input id="fname" name="fullname"  type="text" size="23" maxlength="30" />
 
             </label>
         </p>
 
         <p>
             <label>Phone:<br>
-                <input type="tel" placeholder="###" size="5" maxlength="10" required> -
-                <input type="tel" placeholder="###" size="5" maxlength="10" required> -
-                <input type="tel" placeholder="####" size="6" maxlength="10" required>
+                <input type="tel" name="phone1" placeholder="###" size="5" maxlength="10" > -
+                <input type="tel" name="phone2" placeholder="###" size="5" maxlength="10" > -
+                <input type="tel" name="phone3" placeholder="####" size="6" maxlength="10" >
             </label>
         </p>
 
         <p>
             <label>Email:<br>
-                <input type="email" placeholder="name@domain.com" size="23" maxlength="30" required/>
+                <input type="email" name="mymail" placeholder="name@domain.com" size="23" maxlength="30" />
             </label>
         </p>
 
@@ -228,17 +239,18 @@
         <p>
             <label>Number of guests: <br>
                 <input type="number"
+                       name="numGuests"
                        min="0"
                        max="9"
                        step="1"
-                       value="4">
+                       value="4" >
             </label>
         </p>
 
 
         <p>
             <label for="arrival">Arrival method: <br>
-                <input type="text" id="arrival" size="23" maxlength="30"
+                <input type="text" name="arrival1" id="arrival" size="23" maxlength="30"
                        placeholder="Choose method" list="method">
                 <datalist id="method">
                     <option value="Independently">
@@ -250,47 +262,109 @@
         <p>
             <label>Additional Comments: <br>
 
-                <textarea rows="3" cols="30">Write your comment here...</textarea>
-
+                <textarea placeholder="Write your comment here..." rows="3" cols="30"></textarea>
+                <span id="chars">200</span> characters remaining
             </label>
         </p>
 
         <p>
-            <input class="button button2 rounded" type="submit" value="Submit">
+            <input class="button button2 rounded" type="submit" value="Submit" id="but1">
             <input class="button button2 rounded" type="reset" value="Clean">
         </p>
-
     </form>
 </section>
 
 
-<ul class="social-network social-circle centerpos">
+<ul class="social-network social-circle d-flex justify-content-center">
     <li><a href="https://www.facebook.com/ChampionsLeague/" class="icoFacebook" title="Facebook"><i
-            class="fa fa-facebook"></i></a></li>
+            class="fa fa-facebook"></i></a>
+    </li>
     <li><a href="https://twitter.com/championsleague" class="icoTwitter" title="Twitter"><i
-            class="fa fa-twitter"></i></a></li>
+            class="fa fa-twitter"></i></a>
+    </li>
     <li>
         <a href="https://www.google.com/search?ei=z_aoXI36MMqukwWzp4qICg&q=champions+league&oq=champions+league&gs_l=psy-ab.3..35i39i70i253j0i203l3j0j0i203j0j0i203l3.5704.8434..8570...0.0..0.193.1195.0j7......0....1..gws-wiz.......0i71j35i39j0i7i30j0i22i30.CGUpLrnTCPA"
-           class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+           class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a>
+    </li>
 </ul>
 
 
-<footer class="navbar navbar-expand-sm bg-light navbar-light, content-fluid">
-    <ul class="navbar-nav center">
-        <li class="nav-item active">
-            <a class="nav-link" href="mailto:dvdn.99@gmail.com?subject=Feedback&body=Dear David,">Contact Us</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled"> &copy; All rights reserved to</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="https://github.com/dvdn99">David Novizky</a>
-        </li>
-        <li class="nav-item active">
-            <a class="nav-link" href="#top">Top</a>
-        </li>
-    </ul>
+<footer class="bg-light footer text-xs-center py-5" id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="accordion d-lg-flex w-100" id="accordion">
+                        <div class="col-lg-4 col-md-12">
+                            <a href="#one" class="h4 py-0 text-primary nav-link
+                            d-block d-lg-none d-xl-none" data-toggle="collapse">
+                                Contact Us
+                            </a>
+                            <div class="text-primary h4 d-none d-lg-block d-xl-block">
+                                Contact Us
+                            </div>
+                            <div class="collapse d-lg-flex" id="one" data-parent="#accordion">
+                                <button type="button" class="btn btn-primary" id="myBtn">Send Mail for Feedback</button>
+                                <a class="nav-link"  href="mailto:dvdn.99@gmail.com?subject=Feedback&body=Dear David,"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <a href="#two" class="h4 py-0 text-primary nav-link
+                            d-block d-lg-none d-xl-none" data-toggle="collapse">
+                                Author
+                            </a>
+                            <div class="text-primary h4 d-none d-lg-block d-xl-block">
+                                Author
+                            </div>
+                            <div class="collapse d-lg-flex" id="two" data-parent="#accordion">
+                                <button type="button" class="btn btn-primary" disabled> &copy; All rights reserved to David Novizky</button>
+                                <a class="nav-link disabled"></a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <a href="#three" class="h4 py-0 text-primary nav-link
+                             d-block d-lg-none d-xl-none" data-toggle="collapse">
+                                Github Account
+                            </a>
+                            <div class="text-primary h4 d-none d-lg-block d-xl-block">
+                                Github Account
+                            </div>
+                            <div class="collapse d-lg-flex" id="three" data-parent="#accordion">
+                                <a class="btn btn-primary" href="https://github.com/dvdn99">Visit my GitHub Account!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title float-left">Share with us your opinion</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex justify-content-center">
+                    <img src="mylogo.png" alt="logo_image" width="100" height="100">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-primary" href="mailto:dvdn.99@gmail.com?subject=Feedback&body=Dear David,">Send Mail</a>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+
 
 </body>
 </html>
