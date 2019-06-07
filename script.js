@@ -9,7 +9,7 @@ $(function() {
         else
             i = 1;
 
-        var newSrc = 'carrousel\\' + i + '.jpg';
+        var newSrc = 'img\\carrousel\\' + i + '.jpg';
         $("#car").attr('src', newSrc );
     });
 

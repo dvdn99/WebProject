@@ -51,7 +51,7 @@ img.border {
 
 body {
     margin: 0;
-    background-image: url("background.jpg");
+    background-image: url("img/background.jpg");
     background-attachment: fixed;
 }
 
@@ -151,7 +151,7 @@ h3 {
 
 @font-face {
     font-family: myFirstFont;
-    src: url(sansation_light.woff);
+    src: url(font/sansation_light.woff);
 }
 
 ul.social-network {
