@@ -5,8 +5,13 @@
     <label>
         <h2 id="reg"><br>Event Registration: Get Your Ticket!</h2>
     </label>
+        
 
-    <form method="post" action="<?= $_SERVER['PHP_SELF']?>" autocomplete="on" name="myForm" novalidate>
+    //if-else form structure
+    <?php if($message_body != ''){
+        echo "<div><h2>" . $message_body  . "</h2></div>";
+    }else{?>
+    <form method="post" action="site.php" autocomplete="on" name="myForm" novalidate target="reg">
 
         <p>
             <label>Full name: <br>
@@ -68,6 +73,7 @@
             <input class="button button2 rounded" type="submit" value="Submit">
             <input class="button button2 rounded" type="reset" value="Clean">
         </p>
-        <div><h2><?=$message_body?></h2></div>
+
     </form>
+    <?php }?>
 </section>

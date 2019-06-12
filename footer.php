@@ -1,10 +1,10 @@
 
 <ul class="social-network social-circle d-flex justify-content-center">
     <li><a href="https://www.facebook.com/ChampionsLeague/" class="icoFacebook" title="Facebook"><i
-                class="fa fa-facebook"></i></a>
+                    class="fa fa-facebook"></i></a>
     </li>
     <li><a href="https://twitter.com/championsleague" class="icoTwitter" title="Twitter"><i
-                class="fa fa-twitter"></i></a>
+                    class="fa fa-twitter"></i></a>
     </li>
     <li>
         <a href="https://www.google.com/search?ei=z_aoXI36MMqukwWzp4qICg&q=champions+league&oq=champions+league&gs_l=psy-ab.3..35i39i70i253j0i203l3j0j0i203j0j0i203l3.5704.8434..8570...0.0..0.193.1195.0j7......0....1..gws-wiz.......0i71j35i39j0i7i30j0i22i30.CGUpLrnTCPA"
